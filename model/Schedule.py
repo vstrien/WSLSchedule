@@ -1,8 +1,7 @@
 from .Constant import Constant
-from .CourseClass import CourseClass
+from .CourseDay import CourseDay
 from .Reservation import Reservation
 from .Criteria import Criteria
-from collections import deque
 from random import randrange
 
 import numpy as np
@@ -209,7 +208,7 @@ class Schedule:
         # return smart pointer to offspring
         return new_chromosome
 
-    def repair(self, cc1: CourseClass, reservation1_index: int, reservation2: Reservation):
+    def repair(self, cc1: CourseDay, reservation1_index: int, reservation2: Reservation):
         nr = self._configuration.numberOfRooms
         DAY_HOURS, DAYS_NUM = Constant.DAY_HOURS, Constant.DAYS_NUM
         slots = self._slots
@@ -303,7 +302,7 @@ class Schedule:
 
             # check overlapping of classes for professors and student groups
             timeId = day * daySize + time
-            po, go = Criteria.isOverlappedProfStudentGrp(slots, cc, numberOfRooms, timeId)
+            po, go = Criteria.isOverlappedTrainer(slots, cc, numberOfRooms, timeId)
 
             # professors have no overlapping classes?
             score = 0 if po else score + 1

@@ -15,20 +15,19 @@ class Reservation:
     def parse(hashCode):
         reservation = Reservation._reservationPool.get(hashCode)
         if reservation is None:
-            date = hashCode // (Reservation.NR)
-            hashCode2 = hashCode - (date * Reservation.NR)
-            room = hashCode2 // 1
-            time = hashCode2 % 
-            reservation = Reservation(date, time, room)
+            date = hashCode // 100
+            duration = (hashCode - date * 100) // 10
+            room = (hashCode - date * 100 - duration * 10)
+            reservation = Reservation(date, duration, room)
             Reservation._reservationPool[hashCode] = reservation
         return reservation
 
     @staticmethod
     def getHashCode(date: int, duration: int, room: int) -> int:
-            return date * Reservation.NR * duration + room * duration + duration
+            return date * 100 + duration * 10 + room
 
     @staticmethod
-    def getReservation(nr: int, date: int, time: int, room: int):
+    def getReservation(nr: int, date: int, duration: int, room: int):
         if nr != Reservation.NR and nr > 0:
             Reservation.NR = nr
             Reservation._reservationPool.clear()
@@ -37,7 +36,7 @@ class Reservation:
         reservation = Reservation.parse(hashCode)
 
         if reservation is None:
-            reservation = Reservation(date, time, room)
+            reservation = Reservation(date, duration, room)
             Reservation._reservationPool[hashCode] = reservation
         return reservation
 

@@ -16,7 +16,7 @@
 			"name": "Koos",
 			"possibleCourses": [1],
 			"availableDates": [
-				20220201, 20220202, 20220203, 20220204, 20220205,20220206, 20220207, 20220208, 20220209, 20220210,
+				20220201, 20220202, 20220203, 20220204, 20220205,20220206, 20220207, 20220208, 20220209, 20220210
 			]
 		}
 	},
@@ -25,7 +25,7 @@
 			"id": 1,
 			"name": "Data-analyse met Power BI",
 			"daysBetweenSessions": 7,
-			"schedule": [0.5, 0.5, 0.5, 0.5]
+			"schedule": [4, 4, 4, 4]
 		}
 	},
 	{
@@ -33,7 +33,7 @@
 			"id": 2,
 			"name": "DAX voor Power BI",
 			"daysBetweenSessions": 7,
-			"schedule": [0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+			"schedule": [4, 4, 4, 4, 4, 4]
 		}
 	},
 	{
@@ -41,7 +41,7 @@
 			"id": 3,
 			"name": "DP-500",
 			"daysBetweenSessions": 1,
-			"schedule": [1, 1, 1, 1]
+			"schedule": [8, 8, 8, 8]
 		}
 	},
 	{
@@ -49,7 +49,7 @@
 			"id": 4,
 			"name": "Dimensioneel Modelleren",
 			"daysBetweenSessions": 1,
-			"schedule": [1]
+			"schedule": [8]
 		}
 	},
 	{
@@ -57,7 +57,7 @@
 			"id": 5,
 			"name": "Advanced Dimensioneel Modelleren",
 			"daysBetweenSessions": 1,
-			"schedule": [1, 0.5]
+			"schedule": [8, 4]
 		}
 	},
 	{
@@ -65,7 +65,7 @@
 			"id": 6,
 			"name": "Data Engineering with Azure Databricks",
 			"daysBetweenSessions": 1,
-			"schedule": [1, 1]
+			"schedule": [8, 8]
 		}
 	},
 	{
@@ -73,7 +73,7 @@
 			"id": 7,
 			"name": "Opleiding Azure Data Engineering",
 			"daysBetweenSessions": 7,
-			"schedule": [1, 1, 1, 1, 1, 1]
+			"schedule": [8, 8, 8, 8, 8, 8]
 		}
 	},
 	{
@@ -81,7 +81,7 @@
 			"id": 8,
 			"name": "Python Fundamentals",
 			"daysBetweenSessions": 1,
-			"schedule": [1, 1]
+			"schedule": [8, 8]
 		}
 	},
 	{
